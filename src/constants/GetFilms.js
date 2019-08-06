@@ -1,0 +1,3 @@
+export const GET_FILM_REQUEST = "GET_FILM_REQEST";
+export const GET_FILM_SUCCESS = "GET_FILM_SUCCESS";
+export const GET_FILM_FAIL = "GET_FILM_FAIL";

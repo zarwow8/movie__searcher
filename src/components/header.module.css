@@ -1,0 +1,27 @@
+.header {
+  background-color: rgb(84, 28, 95);
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.label {
+  color: #fff;
+  font-size: 22px;
+  margin-left: 35%;
+  margin-right: 50px;
+}
+.input {
+  border: 0px;
+  width: 300px;
+  padding: 10px;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+.button {
+  color: rgb(130, 105, 199);
+  padding: 5px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  margin-left: 10px;
+
+  background-color: #fff;
+}
