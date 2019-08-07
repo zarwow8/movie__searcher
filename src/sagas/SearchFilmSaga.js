@@ -6,11 +6,12 @@ export function* getSearchFilms(action) {
   try {
     const data = yield call(
       fetch,
-      `https://api.themoviedb.org/3/search/movie?api_key=8fad618fe12a6ec9b07ad6c2597f2e6f&language=ru&page=1&query=${
-        action.payload
-      }`
+      `https://api.themoviedb.org/3/search/movie?api_key=8fad618fe12a6ec9b07ad6c2597f2e6f&language=ru&page=${
+        action.payload.numPage
+      }&query=${action.payload.nameFilm}`
     );
     const json = yield call([data, "json"]);
+
     yield put({ type: GET_FILM_SUCCESS, payload: json });
   } catch (e) {
     yield put({ type: GET_FILM_FAIL, payload: e });

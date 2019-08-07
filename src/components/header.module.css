@@ -1,12 +1,13 @@
 .header {
   background-color: rgb(84, 28, 95);
-  padding-top: 50px;
-  padding-bottom: 50px;
+  height: 100px;
+  padding-top: 30px;
+  margin-bottom: 30px;
 }
 .label {
   color: #fff;
   font-size: 22px;
-  margin-left: 35%;
+  margin-left: 25%;
   margin-right: 50px;
 }
 .input {
@@ -15,6 +16,11 @@
   padding: 10px;
   border-radius: 5px;
   margin-left: 10px;
+  transition: padding 0.2s;
+  outline: none;
+}
+.input:focus {
+  padding: 15px;
 }
 .button {
   color: rgb(130, 105, 199);
@@ -22,6 +28,7 @@
   border: 2px solid #fff;
   border-radius: 5px;
   margin-left: 10px;
-
+  cursor: pointer;
+  outline: none;
   background-color: #fff;
 }

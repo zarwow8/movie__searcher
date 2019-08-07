@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./header.module.css";
-import { getSeachedFilm } from "../actions/searchFilm";
-import { useDispatch, useSelector } from "react-redux";
+import { getNameSearchFilm } from "../actions/searchFilm";
+import { useDispatch } from "react-redux";
 const Header = () => {
   const dispatch = useDispatch();
   const [value, setValue] = useState("");
@@ -20,10 +20,13 @@ const Header = () => {
             placeholder="Введите название фильма"
             className={styles.input}
             onChange={searchingFilm}
+            onKeyPress={e => {
+              if (e.key === "Enter") dispatch(getNameSearchFilm(value));
+            }}
           />
           <button
             className={styles.button}
-            onClick={() => dispatch(getSeachedFilm(value))}
+            onClick={() => dispatch(getNameSearchFilm(value))}
           >
             Искать
           </button>
