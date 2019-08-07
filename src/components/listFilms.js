@@ -4,6 +4,7 @@ import { getSeachedFilm } from "../actions/searchFilm";
 import { useDispatch, useSelector } from "react-redux";
 import styles from "./listFilms.module.css";
 import Paginations from "./Pagination";
+import { Link } from "react-router-dom";
 
 const ListFilms = () => {
   const dispatch = useDispatch();
@@ -30,12 +31,14 @@ const ListFilms = () => {
         ) : (
           results.map(item => (
             <li className={styles.list__item} key={item.id}>
-              <img
-                src={`https://image.tmdb.org/t/p/w185_and_h278_bestv2${
-                  item.poster_path
-                }`}
-                alt={item.title || "Постер фильма"}
-              />
+              <Link to={`/film/${item.id}`}>
+                <img
+                  src={`https://image.tmdb.org/t/p/w185_and_h278_bestv2${
+                    item.poster_path
+                  }`}
+                  alt={item.title || "Постер фильма"}
+                />
+              </Link>{" "}
             </li>
           ))
         )}

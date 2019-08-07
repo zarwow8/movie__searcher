@@ -1,0 +1,46 @@
+.about {
+  display: flex;
+  align-items: flex-start;
+  font-size: 18px;
+  height: 100%;
+}
+
+.desc {
+  padding-top: 10px;
+  background-color: rgb(185, 187, 199);
+  margin-left: 50px;
+  padding-left: 10px;
+  height: 600px;
+  width: 70%;
+  word-wrap: wrap;
+  font-style: italic;
+}
+.desc h2 {
+  margin-bottom: 50px;
+  font-style: italic;
+}
+.genres {
+  display: flex;
+  margin-bottom: 50px;
+  font-style: italic;
+}
+.genres ul {
+  display: flex;
+  margin-left: 10px;
+}
+
+.genres ul li {
+  margin-right: 5px;
+}
+.about__overview {
+  display: flex;
+
+  margin-right: 10px;
+}
+.overview {
+  padding: 5px;
+  width: 90%;
+}
+.name {
+  margin-right: 5px;
+}

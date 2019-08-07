@@ -1,3 +1,4 @@
+import { GET_SEARCHED_FILM } from "../constants/SearchFilm";
 const initialState = {
   nameFilm: "",
   searchingQuery: false
@@ -5,7 +6,7 @@ const initialState = {
 
 function SearchInfo(state = initialState, action) {
   switch (action.type) {
-    case "GET_SEARCHED_FILM":
+    case GET_SEARCHED_FILM:
       return {
         ...state,
         searchingQuery: true,
